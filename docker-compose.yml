@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  export-neo4j:
+    platform: linux/amd64
+    build:
+      context: .
+    volumes:
+      - /home/jdr0887/Downloads/wildlife:/data
+      - /media/jdr0887/backup/home/jdr0887/import:/var/lib/neo4j/import
+    user: 1000:7474
+    expose:
+      - 7474
+      - 7687
+    ports:
+      - "7474:7474"
+      - "7687:7687"
