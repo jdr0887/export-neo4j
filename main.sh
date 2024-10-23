@@ -11,8 +11,8 @@ neo4j start --verbose
 
 sleep 20
 
-#cat /export/export.cypher | cypher-shell --format plain
+cat /export/export.cypher | cypher-shell --format plain
 #curl -X POST http://localhost:7474/rdf/neo4j/cypher -d '{ "cypher":"MATCH (n)-[r]-(m) RETURN *", "format" : "Turtle" }' > /var/lib/neo4j/import/neo4j.ttl
-curl -X POST http://localhost:7474/rdf/neo4j/cypher -d '{ "cypher":"MATCH (n)-[r]-(m) RETURN *", "format" : "JSON-LD" }' > /var/lib/neo4j/import/neo4j.json
+#curl -X POST http://localhost:7474/rdf/neo4j/cypher -d '{ "cypher":"MATCH (n)-[r]-(m) RETURN *", "format" : "JSON-LD" }' > /var/lib/neo4j/import/neo4j.json
 
 #sleep 5000
